@@ -1,0 +1,25 @@
+{% extends "szablon.html" %}
+{% block tytul %}Lista klas{% endblock %}
+{% block h1 %}Lista klas{% endblock %}
+{% block tresc %}
+<table class="table">
+	 <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Nazwa klasy</th>
+		  <th scope="col">Rok naboru</th>
+		  <th scope="col">Rok matury</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		  {% for klasa in klasy %}
+		  <tr>
+			  <th scope="row">{{ klasa }}</th>
+			  <td>{{ klasa.nazwa }}</td>
+			  <td>{{ klasa.roknaboru }}</td>
+			  <td>{{ klasa.rokmatury }}</td>
+		  </tr>
+		  {% endfor %}
+	  </tbody>
+</table>
+{% endblock %}

@@ -45,7 +45,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Edytuj Ucznia</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Dodaj klasę</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url_for('dodaj') }}">Dodaj klasę</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Edytuj klasę</a>
@@ -54,7 +54,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Pokaż uczniów</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Pokaż klasy</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="lista_klas">Pokaż klasy</a>
           </li>
         </ul>
       </div>
@@ -66,12 +66,12 @@
     <div class="container">
       <h1 class="mb-0">{% block h1 %}{% endblock %}</h1>
       <hr class="star-light">
-      <h2 class="font-weight-light mb-0">{% block tresc %}{% endblock %}</h2>
+      <h2 class="font-weight-light mb-0">{% block h2 %}{% endblock %}</h2>
     </div>
   </header>
 
-  <div class>
-	<p></p>
+  <div class="container">
+	{% block tresc %}{% endblock %}
   </div>
 
   <!-- Footer -->

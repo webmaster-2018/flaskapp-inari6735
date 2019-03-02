@@ -11,15 +11,6 @@ blad1 = 'To pole jest wymagane'
 
 class KlasaForm(FlaskForm):
     id = HiddenField()
-    nazwa = StringField()
-    roknaboru = IntegerField()
-    rokmatury = IntegerField()
-    
-
-
-class UczenForm(FlaskForm):
-    id = HiddenField()
-    imie = StringField('Imie: ')
-    nazwisko = StringField('Nazwisko: ')
-    plec = BooleanField('Płeć: ')
-    klasa = SelectField('Klasa', coerce=int)
+    nazwa = StringField('Nazwa klasy:', validators=[Required(message=blad1)])
+    roknaboru = IntegerField('Rok naboru:', validators=[Required(message=blad1)])
+    rokmatury = IntegerField('Rok matury:', validators=[Required(message=blad1)])
