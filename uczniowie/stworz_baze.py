@@ -7,7 +7,10 @@ import os
 
 from modele import *
 
-def main(args):
+from uczniowie.modele import baza, Klasa, Uczen, baza_plik
+
+
+def main():
     if os.path.exists(baza_plik):
         os.remove(baza_plik)
     baza.connect()
@@ -17,5 +20,5 @@ def main(args):
     return 0
 
 if __name__ == '__main__':
-    import sys
-    sys.exit(main(sys.argv))
+   import sys
+   sys.exit(main())

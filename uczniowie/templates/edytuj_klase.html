@@ -1,0 +1,23 @@
+{% extends "szablon.html" %}
+{% block tytul %}Edycja danych{% endblock %}
+{% block h1 %}Tu możesz wprowadzić nowe dane{% endblock %}
+{% block tresc %}
+<div class="container m-5 pb-5">
+  <form method="POST">
+  {{ form.csrf_token }}
+  {{ form.nazwa.label }}
+  {{ form.nazwa(class="form-control") }}
+  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.nazwa }}{% endfor %}</small>
+  <br>
+  {{ form.roknaboru.label }}
+  {{ form.roknaboru(class="form-control") }}
+  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.roknaboru }}{% endfor %}</small>
+  <br>
+  {{ form.rokmatury.label }}
+  {{ form.rokmatury(class="form-control") }}
+  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.rokmatury }}{% endfor %}</small>
+  <br>
+  <input type="submit" class="btn btn-info" value="Prześlij" style="float: right;">
+</div>
+{% endblock %}
+
