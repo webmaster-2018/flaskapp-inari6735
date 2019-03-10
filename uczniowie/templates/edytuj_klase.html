@@ -7,15 +7,15 @@
   {{ form.csrf_token }}
   {{ form.nazwa.label }}
   {{ form.nazwa(class="form-control") }}
-  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.nazwa }}{% endfor %}</small>
+  <small class="form-text text-muted">Stare: {{ iducznia.nazwa }}</small>
   <br>
   {{ form.roknaboru.label }}
   {{ form.roknaboru(class="form-control") }}
-  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.roknaboru }}{% endfor %}</small>
+  <small class="form-text text-muted">Stare: {{ iducznia.roknaboru }}</small>
   <br>
   {{ form.rokmatury.label }}
   {{ form.rokmatury(class="form-control") }}
-  <small class="form-text text-muted">Stare: {% for klasa in klasy %}{{ klasa.rokmatury }}{% endfor %}</small>
+  <small class="form-text text-muted">Stare: {{ iducznia.rokmatury }}</small>
   <br>
   <input type="submit" class="btn btn-info" value="Prześlij" style="float: right;">
 </div>
